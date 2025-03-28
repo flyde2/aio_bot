@@ -45,7 +45,7 @@ async def order_status_webhook(request: web.Request):
 
         await bot.send_message(chat_id, msg)
         logging.info(
-            f"Отправлено уведомление для заказа #{order_id} в чат {chat_id}")
+            f"Отправлено уведомление для заказа №{order_id} в чат {chat_id}")
         return web.json_response({"status": "Message sent"})
     except Exception as e:
         logging.exception("Ошибка при обработке webhook запроса:")
